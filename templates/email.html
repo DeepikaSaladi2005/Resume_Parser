@@ -1,0 +1,151 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser - Email Content</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Parser - Step 2</h1>
+        <form action="{{ url_for('email_page') }}" method="post">
+            <div class="form-group">
+                <label for="message">Email Content:</label>
+                <textarea name="message" id="message" placeholder="Enter your email content here..."></textarea>
+            </div>
+            <button type="submit" class="btn">Send Emails</button>
+        </form>
+    </div>
+</body>
+</html-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser - Email Content</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Background styling */
+        body {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('/static/images/em4.avif'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header styling */
+        h1 {
+            color: #2C3E50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Textarea styling */
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #4A4A4A;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #bcbcbc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 150px;
+            resize: none;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #2C3E50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #2C3E50;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1A252F;
+        }
+
+        /* Styling for mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Parser</h1>
+        <form action="{{ url_for('email_page') }}" method="post">
+            <div class="form-group">
+                <label for="message">Email Content:</label>
+                <textarea name="message" id="message" placeholder="Enter your email content here..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Emails</button>
+        </form>
+    </div>
+</body>
+</html>
+
